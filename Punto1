@@ -1,0 +1,44 @@
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+int main(){
+	int x=0,y=1,z=0,valormin,valormax,sumfactoriales,numfactoriales=0;
+	cout<<"Ingrese el rango minimo";
+	cin>>valormin;
+	cout<<"Ingrese el rango maximo";
+	cin>>valormax;
+	
+	for(int i=valormin;i<=valormax;i++){
+        cout<<i<<"\n";
+        for(int j=1;j<valormax;j++){
+        	z = x + y;
+        	cout<<z<<"\n";
+        	x = y;
+        	y = z;
+        	cout<<"El numero de fibonacci comparado es:"<<y<<"\n";
+        cout<<"ahora vamos a comparar \n";
+			int cont,fac;
+			if(i==y){
+				cout<<"COMPARANDO \n";
+				cont = y+1;
+				fac = 1;
+				while (cont>1){
+					cont = cont-1;
+					fac = fac*cont;
+					sumfactoriales+=fac;
+					numfactoriales+=1;
+    				}
+    			break;
+				}
+			else{
+				cout<<"No esta comparando\n ";
+			}
+
+		}
+		
+}
+int promedio = sumfactoriales/numfactoriales;
+cout<<"El promedio de los factoriales de los numeros fibonacci comprendidos entre los dos valores dados es: \n"<<promedio<<"\n";
+cout<<sumfactoriales<<"\n";
+cout<<numfactoriales<<"\n";
+}

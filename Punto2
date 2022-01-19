@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iostream>
 using namespace std;
 int main(){
 	int nums,n,n1=0,n2=1,f;
@@ -9,20 +8,21 @@ int main(){
 		n1=0;
 		n2=1;
 		cout<<"\n";
-		cout<<i+1<<".) Ingrese un numero entero: ";cin>>n;}
+		cout<<i+1<<".) Ingrese un numero entero: ";cin>>n;
 		for(int j=0;j<n;j++){
-			cout<<"\nFibonacci: "<<n1<<endl;  
+			//cout<<"\nFibonacci: "<<n1<<endl;  
 			n1+=n2;
-			cout<<"\nFibonacci: "<<n2<<endl; 
+			//cout<<"\nFibonacci: "<<n2<<endl; 
 			n2+=n1;
-			}
 			
 			if(n==n1 or n==n2 ){
-				cout<<"\n==> El numero ingresado es Fibonacci.";
+				//cout<<"\n==> El numero ingresado es Fibonacci.";
 				con++;
-				}
 				if(con ==2){
 					f=n;
-					}
-           
+				}
+	        }
+		}
+	cout<<"Segundo fibonacci: "<<f;	
 	}
+}

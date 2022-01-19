@@ -7,31 +7,29 @@ int main(){
 	cin>>valormin;
 	cout<<"Ingrese el rango maximo";
 	cin>>valormax;
-	
-	for(int i=valormin;i<=valormax;i++){
-        cout<<i<<"\n";
-        for(int j=1;j<valormax;j++){
-        	z = x + y;
-        	cout<<z<<"\n";
-        	x = y;
-        	y = z;
-        	cout<<"El numero de fibonacci comparado es:"<<y<<"\n";
-        cout<<"ahora vamos a comparar \n";
+
+	for(int j=1;j<=valormax;j++){
+        z = x + y;
+        cout<<z<<" "<<"Este es el numero de fibonacci"<<"\n";
+        x = y;
+        y = z;
+		for(int i=valormin;i<=valormax;i++){
+	        cout<<i<<" "<<"\n Este es el Numero del rango de valores que esta comparando. \n"<<"\n";
+        	cout<<"El numero de fibonacci comparado es:"<<z<<"\n"<<"\n";
 			int cont,fac;
-			if(i==y){
+			if(i==z){
 				cout<<"COMPARANDO \n";
-				cont = y+1;
+				cont = z+1;
 				fac = 1;
 				while (cont>1){
 					cont = cont-1;
 					fac = fac*cont;
-					sumfactoriales+=fac;
-					numfactoriales+=1;
     				}
-    			break;
+    			sumfactoriales+=fac;
+				numfactoriales+=1;
 				}
 			else{
-				cout<<"No esta comparando\n ";
+				cout<<"No es un Numero Fibonacci \n ";
 			}
 
 		}

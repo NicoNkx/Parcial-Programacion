@@ -1,28 +1,28 @@
 #include <iostream>
 using namespace std;
 int main(){
-	int nums,n,n1=0,n2=1,f;
+	int nums,num,x=0,z=1,resul;
 	int con=0;
 	cout<<"¿Cuantos numeros desea ingresar?: ";cin>>nums;
 	for(int i=0;i<nums;i++){
-		n1=0;
-		n2=1;
+		x=0;
+		z=1;
 		cout<<"\n";
-		cout<<i+1<<".) Ingrese un numero entero: ";cin>>n;
-		for(int j=0;j<n;j++){
-			//cout<<"\nFibonacci: "<<n1<<endl;  
-			n1+=n2;
-			//cout<<"\nFibonacci: "<<n2<<endl; 
-			n2+=n1;
+		cout<<i+1<<".) Ingrese un numero entero: ";cin>>num;
+		for(int j=0;j<num;j++){
+			//cout<<"\numFibonacci: "<<n1<<endl;  
+			x+=z;
+			//cout<<"\numFibonacci: "<<n2<<endl; 
+			z+=x;
 			
-			if(n==n1 or n==n2 ){
-				//cout<<"\n==> El numero ingresado es Fibonacci.";
+			if(num==x or num==z ){
+				//cout<<"\num==> El numero ingresado es Fibonacci.";
 				con++;
 				if(con ==2){
-					f=n;
+					resul=num;
 				}
 	        }
-		}
-	cout<<"Segundo fibonacci: "<<f;	
+		}	
 	}
+	cout<<"Segundo fibonacci: "<<resul;
 }
